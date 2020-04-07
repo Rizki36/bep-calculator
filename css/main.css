@@ -1,0 +1,14 @@
+.btn-delete{
+    margin-left: 5px;
+}
+#home,#tahap{
+    padding: 60px
+}
+@media (min-width: 480px) { 
+    
+ }
+@media (min-width: 800px) { 
+    #home,#tahap{
+        padding: 150px
+    }
+ }

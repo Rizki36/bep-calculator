@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("font/Montserrat-Regular.ttf") format("ttf"),
+        url("font/Montserrat-Light.ttf") format("ttf"),
+        url("font/Montserrat-Bold.ttf") format("ttf"),
+
+}
+
+
+/* ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+} */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+    /* background-color: #F5F5F5; */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    /* border: 2px solid #555555; */
+}
+
+#btn-about,
+#btn-help {
+    cursor: pointer;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: minmax(220px, 220px) 1fr 1fr;
+    grid-template-rows: minmax(50px, 50px) 1fr;
+    grid-template-areas:
+        'header    header header'
+        'left      grafik grafik';
+}
+
+header {
+    grid-area: header;
+    background-color: #fff;
+    color: #218791;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+header h3 {
+    font-size: 1.2em;
+    margin: 0;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+header h6 {
+    font-size: 0.7em !important;
+    margin-right: 23px;
+    letter-spacing: 0.6em;
+}
+
+aside {
+    grid-area: left;
+    background-color: #218791;
+    color: #fff;
+    display: flex;
+    /* justify-content: center; */
+    padding: 20px 10px;
+    padding-left: 20px;
+    flex-direction: column;
+    overflow: auto;
+    /* margin-right: 20px; */
+    /* margin: 0 20px; */
+}
+
+section {
+    grid-area: grafik;
+    height: 100%;
+    margin: 0;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-container {
+    border: #fff 4px solid;
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    /* padding: 20px; */
+    /* text-align: center; */
+}
+
+.a-container .a-title {
+    color: #218791;
+    background-color: #fff;
+    border-radius: 25px;
+    letter-spacing: 0.5em;
+    font-size: 0.8em;
+    margin-top: -10px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.container label {
+    letter-spacing: 0.3em;
+    font-size: 0.6em;
+    margin: 0 15px 5px;
+}
+
+.a-container input {
+    font-size: 0.8em;
+    color: #218791;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+.a-container button#btn-add {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #fff;
+    height: 35px;
+    width: 160px;
+    border-radius: 20px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.a-container button#btn-add:hover {
+    color: #218791;
+    background-color: #fff;
+}
+
+/* input */
+
+.a-container .input-group {
+    /* margin-top: 10px; */
+    margin-bottom: 5px;
+}
+
+.a-container .input-group:nth-last-child(1) {
+    margin-bottom: 10px;
+}
+
+.a-container .input-group input.biaya {
+    /* padding: 10px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 160px;
+    height: 35px;
+}
+
+/* tahap */
+.a-container .tahap-group {
+    margin: 7px 0 5px;
+}
+
+/* .a-container .tahap-group label {
+    margin-right: 50px;
+} */
+
+.a-container .tahap-group input.input-tahap {
+    padding: 10px 20px;
+    width: 125PX;
+    /* text-align: center; */
+}
+
+
+.a-container .tahap-group button.btn-hapus {
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #218791;
+    color: #fff;
+    border: 2px solid #fff;
+    outline: none;
+
+}
+
+.a-container .tahap-group button.btn-hapus:hover {
+    background: #fff;
+    color: #218791;
+}
+
+.a-container .tahap-group button.btn-hapus:active {
+    background: #218791;
+    color: #fff;
+}
+
+
+.a-container .a-sub-container {
+    margin: 30px 5px 0;
+    /* overflow-y: auto; */
+}
+
+/* .a-container:nth-child(2) .a-sub-container {
+    max-height: 100px;
+} */
+
+
+/* .a-container:nth-child(2) {
+    max-height: 250px;
+} */
+
+#container-about,#container-help{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.container-about {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 80px;
+    left: 80px;
+    bottom: 80px;
+    right: 80px;
+    background-color: #218791;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 25px;
+    color: #fff;
+}
+.container-help {
+    display: flex;
+    position: absolute;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    top: 80px;
+    left: 80px;
+    bottom: 80px;
+    right: 80px;
+    background-color: #218791;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 25px;
+    color: #fff;
+    padding: 50px;
+}
+
+
+.container-about img {
+    border-radius: 50%;
+    display: block;
+}
+
+.container-about h6 {
+    letter-spacing: .4em;
+}
+
+.container-about a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container-about button ,.container-help button{
+    color: #fff;
+    margin-top: auto;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: #fff solid 2px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    outline: none;
+}
+.container-about button:hover,.container-help button:hover {
+    color: #218791;
+    background-color: #fff;
+    border: #fff solid 2px;
+}
+
+.d-none {
+    display: none !important;
+    transition: all 3s;
+}
+#btn-coba:hover{
+    color: #218791;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: minmax(220px, 220px) 1fr 1fr;
+        grid-template-rows: minmax(50px, 50px) 1fr 1fr;
+        grid-template-areas:
+            'header  header header'
+            'grafik  grafik grafik'
+            'left    left   left';
+    }
+
+    .a-container {
+        margin: 6px 5px;
+        /* height: 100%; */
+    }
+
+    .a-container .a-sub-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .input-group {
+        flex-grow: 1;
+        margin: 20px;
+    }
+
+    .input-group label {
+        display: block
+    }
+
+    .a-container .input-group input.biaya {
+        /* padding: 0; */
+        height: 35px;
+        /* padding-left: 0; */
+        width: 100%;
+    }
+
+    .a-container .tahap-group {
+        margin: 10px 10px 0;
+        padding: 0;
+        flex-grow: 1;
+    }
+
+    .a-container button#btn-add {
+        /* flex-grow: 1; */
+        height: 35px;
+        border-radius: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin: 10px;
+        width: 95%;
+    }
+
+    .a-container .tahap-group label {
+        margin-right: 0;
+    }
+
+    .a-container .tahap-group input.input-tahap {
+        padding: 10px 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* .container .input-group label{
+    
+} */
