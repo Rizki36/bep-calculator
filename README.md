@@ -7,3 +7,4 @@ Aplikasi penghitung Break Event Point
 ## Fitur
 - [x] Grafik Break Even Point
 - [x] Perhitungan Break Even Point
+- [X] Dummy Data
