@@ -74,7 +74,7 @@ header h3 {
 }
 
 header h6 {
-    font-size: 0.7em !important;
+    font-size: 0.5em !important;
     margin-right: 23px;
     letter-spacing: 0.6em;
 }
@@ -228,7 +228,8 @@ section {
     max-height: 250px;
 } */
 
-#container-about,#container-help{
+#container-about,
+#container-help {
     display: flex;
     position: fixed;
     top: 0;
@@ -243,30 +244,45 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    top: 80px;
-    left: 80px;
-    bottom: 80px;
-    right: 80px;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    padding: 20px;
+    overflow-y: auto;
     background-color: #218791;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     border-radius: 25px;
     color: #fff;
 }
+
 .container-help {
     display: flex;
     position: absolute;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    top: 80px;
-    left: 80px;
-    bottom: 80px;
-    right: 80px;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    overflow-y: auto;
     background-color: #218791;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     border-radius: 25px;
     color: #fff;
     padding: 50px;
+}
+
+@media (min-width: 992px) {
+
+    .container-help,
+    .container-about {
+        top: 80px;
+        left: 80px;
+        bottom: 80px;
+        right: 80px;
+    }
 }
 
 
@@ -284,11 +300,12 @@ section {
     text-decoration: none;
 }
 
-.container-about button ,.container-help button{
+.container-about button,
+.container-help button {
     color: #fff;
     margin-top: auto;
     padding: 10px 15px;
-    position: absolute;
+    /* position: absolute; */
     bottom: 40px;
     background-color: rgba(0, 0, 0, 0);
     border: #fff solid 2px;
@@ -296,7 +313,9 @@ section {
     transition: all 0.2s;
     outline: none;
 }
-.container-about button:hover,.container-help button:hover {
+
+.container-about button:hover,
+.container-help button:hover {
     color: #218791;
     background-color: #fff;
     border: #fff solid 2px;
@@ -306,12 +325,24 @@ section {
     display: none !important;
     transition: all 3s;
 }
-#btn-coba:hover{
+
+#btn-coba:hover {
     color: #218791;
     background-color: #fff;
 }
 
+@media (min-width: 768px) {
+    .my-btn {
+        display: none !important;
+    }
+}
+
+
 @media (max-width: 768px) {
+    .title-icon {
+        display: none;
+    }
+
     .container {
         grid-template-columns: minmax(220px, 220px) 1fr 1fr;
         grid-template-rows: minmax(50px, 50px) 1fr 1fr;
@@ -319,6 +350,32 @@ section {
             'header  header header'
             'grafik  grafik grafik'
             'left    left   left';
+    }
+
+    .container-full-grafik {
+        grid-template-areas:
+            'header  header header'
+            'grafik  grafik grafik'
+            'grafik  grafik grafik' !important;
+    }
+
+    .container-full-grafik section {
+        margin: 20px;
+    }
+
+    .container-full-grafik aside {
+        display: none;
+    }
+
+    .container-full-input {
+        grid-template-areas:
+            'header  header header'
+            'left    left   left'
+            'left    left   left' !important;
+    }
+
+    .container-full-input section {
+        display: none;
     }
 
     .a-container {
@@ -375,6 +432,24 @@ section {
     }
 }
 
+
+.my-btn {
+    color: #218791;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #218791;
+    min-width: 60px;
+    padding: 5px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.my-btn.active {
+    color: #fff;
+    background-color: #218791;
+}
 
 /* .container .input-group label{
     
