@@ -116,6 +116,7 @@ program.scatterChart = new Chart(program.grafik, {
       {
         label: "Bep Unit",
         borderColor: "#E3D748",
+        showLine:true,
         pointBorderColor: "#E3D748",
         pointBackgroundColor: "#E3D748",
         pointHoverBackgroundColor: "#E3D748",
@@ -137,6 +138,7 @@ program.scatterChart = new Chart(program.grafik, {
       {
         label: "Break Even Point",
         borderColor: "#218791",
+        showLine:true,
         pointBorderColor: "#218791",
         pointBackgroundColor: "#218791",
         pointHoverBackgroundColor: "#218791",
@@ -158,6 +160,7 @@ program.scatterChart = new Chart(program.grafik, {
       // biaya tetap
       {
         label: "Biaya Tetap",
+        showLine:true,
         backgroundColor: "rgba(128, 182, 244, 0)",
         // backgroundColor: gradientFill,
         borderColor: "rgba(128, 182, 244, 1)",
@@ -181,7 +184,8 @@ program.scatterChart = new Chart(program.grafik, {
       // biaya variabel
       {
         label: "Biaya Variabel",
-        // backgroundColor: gradientFill1,
+        showLine:true,
+        backgroundColor: gradientFill1,
         backgroundColor: "rgba(240, 78, 81,0)",
         borderColor: "rgba(240, 78, 81,1)",
         pointBorderColor: "rgba(240, 78, 81,1)",
